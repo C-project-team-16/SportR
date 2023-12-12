@@ -13,7 +13,7 @@ services:
       - 3000:3000
   backend:
     container_name: backend
-    image: sumanthbadam/sportr-frontend:latest    
+    image: sumanthbadam/sportr-backend:latest    
     ports:
       - 3001:3001
     environment:
