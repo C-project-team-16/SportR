@@ -11,11 +11,15 @@ test("register user", async () => {
         password:"user1234"
     }
 
-    await api
-        .post("/user/register")
-        .send(user)
-        .expect(201)
-        .expect('Content-Type', /application\/json/)
+    try{
+        await api
+            .post("/user/register")
+            .send(user)
+            .expect(201)
+            .expect('Content-Type', /application\/json/)
+    }catch(e){  
+        throw new Error(e);
+    }
 })
 
 test("login user", async () => {
@@ -24,11 +28,15 @@ test("login user", async () => {
         password:"user1234"
     }
 
-    await api
-        .post("/user/login")
-        .send(user)
-        .expect(200)
-        .expect('Content-Type', /application\/json/)
+    try{
+        await api
+            .post("/user/login")
+            .send(user)
+            .expect(200)
+            .expect('Content-Type', /application\/json/)
+    } catch(e){
+        throw new Error(e);
+    }
 })
 
 // afterAll(done => {
