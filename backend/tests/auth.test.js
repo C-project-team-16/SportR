@@ -20,7 +20,7 @@ test("register user", async () => {
 
 test("login user", async () => {
     const user = {
-        username:"user8",
+        username:"user9",
         password:"user1234"
     }
 
