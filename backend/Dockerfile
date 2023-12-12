@@ -1,7 +1,7 @@
 # Dockerfile for Express Backend
 
 # Use node's alpine variant to save on space and version number is 17 (latest)
-FROM node:16
+FROM node:20
 
 # Create the folder "app" under the /usr/src path and set it to be the working directory
 # for the further COPY, RUN and CMD instructions
